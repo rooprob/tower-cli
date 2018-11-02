@@ -16,10 +16,16 @@ tower-cli inventory delete --name=localhost
 tower-cli inventory delete --name=Production
 tower-cli inventory delete --name=Testing
 tower-cli inventory delete --name=QA
+tower-cli inventory delete --name="tower-cli manual examples"
+tower-cli inventory delete --name="tower-cli SCM inventory example"
+tower-cli inventory_script delete --name="foobar inventory script"
 
 echo "Tower-CLI DATA FAKER: deleting credentials"
 tower-cli credential delete --name=user1
 tower-cli credential delete --name=user2
+tower-cli credential delete --name="blank SSH"
+tower-cli credential delete --name="SSH example"
+tower-cli credential delete --name="vault password"
 
 tower-cli credential delete --name="EC2 SSH"
 tower-cli credential delete --name="Local SSH"
@@ -38,6 +44,7 @@ tower-cli project delete --name sample_playbooks
 
 tower-cli project delete --name="Hyrulian Playbooks"
 tower-cli project delete --name="Ansible Examples"
+tower-cli project delete --name="Inventory file examples"
 
 echo "Tower-CLI DATA FAKER: deleting orgs and teams"
 # Teams do not automatically go away when their organization is deleted
